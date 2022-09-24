@@ -10,7 +10,7 @@ export default function Testimonial() {
 					<text className="font-bold text-sky-700 text-xl">$ 100 000 000</text>
 				</h1>
 			</div>
-			<div className="grid grid-cols-3 items-center space-x-4">
+			<div className="grid grid-cols-1 lg:grid-cols-3 items-center space-x-4">
 				<div className="col-span-2 flex flex-col items-center flex-grow px-2">
 					<img
 						src="/testimony.png"
