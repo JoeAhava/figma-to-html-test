@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Banner from "./components/Banner";
+import Draws from "./components/Draws";
+import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
+import GridView from "./components/GridView";
+import Guide from "./components/Guide";
+import Header from "./components/Header";
+import HeaderLabel from "./components/HeaderLabel";
+import ListView from "./components/ListView";
+import SideBar from "./components/SideBar";
+import Testimonial from "./components/Testimonial";
+import TopBar from "./components/TopBar";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<main className=" flex">
+			<aside className=" hidden lg:block w-52 xl:w-96">
+				<SideBar />
+			</aside>
+			<article className=" lg:container lg:flex-grow">
+				<TopBar />
+				<Header />
+				<Banner />
+				<Guide />
+				<Draws />
+				<HeaderLabel title={"Play Upcomming Lotteries Online"} />
+				<GridView />
+				<div className=" grid grid-cols-1 lg:grid-cols-3 lg:flex-row space-x-2">
+					<div className=" col-span-2">
+						<HeaderLabel title="Biggest Lottery Winner" />
+						<Testimonial />
+					</div>
+					<div className="">
+						<HeaderLabel title="Our Latest Winners" />
+						<ListView />
+					</div>
+				</div>
+				<FAQ />
+				<Footer />
+			</article>
+			<aside className="hidden lg:block w-32 xl:w-96"></aside>
+		</main>
+	);
 }
 
 export default App;
